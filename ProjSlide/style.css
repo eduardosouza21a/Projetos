@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-slide {
+    display: flex;
+    justify-content: space-between; /* serparar */
+    width: 50vw;
+    height: 50vh;
+    background-color: black;
+    margin: 20vh auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 30px black;
+}
+
+.container-items {
+    position: absolute;
+    display: flex; /* deixou uma imagen do lado da outro*/
+    width: 50vw;
+    height: 50vh;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    overflow: hidden;   /* para aparecer apenas o que está no "demilitado"*/
+}
+
+.item {
+    width: 50vw;
+    height: 50;
+    transition: all 1s;
+}
+
+.item:first-child:first-child{   /* criou um "loop" */
+	margin-left: -100%;       /* o primeiro sempre se torna antes do que está sendo exibido */
+}
+
+
+.item img {
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
+   
+}
+
+.action-button {
+     font: bold 30px sans-serif;
+     display: flex;
+     width: 50px;
+     justify-content: center;
+     align-items: center;
+     width: 50px;
+     color: #00000000; /* oito vezes o 0 é transparente */
+     user-select: none; /* não ser possivel selecionar*/
+     z-index: 1; /* foi usado para trazer algo que estava atras pra frente */
+}
+
+.action-button:hover{
+    color: white;
+    background-color: #00000050;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
